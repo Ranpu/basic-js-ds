@@ -30,12 +30,12 @@ class BinarySearchTree {
     if (this.data === null) {
       this.data = data;
     } else if (this.data > data) {
-      this.left = !this.left ? new BinarySearchTree() : this.left;
-      this.left.add(data);
+      this.left = !this.left ? new BinarySearchTree().add(data) : this.left.add(data);
     } else if (this.data < data) {
-      this.right = !this.right ? new BinarySearchTree() : this.right;
-      this.right.add(data);
+      this.right = !this.right ? new BinarySearchTree().add(data) : this.right.add(data);
     }
+
+    return this;
   }
 
   has(data) {
@@ -73,6 +73,8 @@ class BinarySearchTree {
     } else if (this.data < data) {
       this.right.remove(data);
     }
+    
+    return this;
   }
 
   min() {

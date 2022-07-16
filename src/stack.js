@@ -25,6 +25,8 @@ class Stack {
       this.prev = new Stack(this.data, this.prev);
       this.data = element;
     }
+
+    return this;
   }
 
   pop() {

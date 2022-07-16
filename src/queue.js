@@ -22,8 +22,8 @@ class Queue {
   getUnderlyingList() {
     return {
       'value': this.value,
-      'next': this.next
-  }
+      'next': this.next 
+    }
   }
 
   enqueue(value) {
@@ -34,6 +34,8 @@ class Queue {
     } else {
       this.next.enqueue(value)
     }
+
+    return this;
   }
 
   dequeue() {
